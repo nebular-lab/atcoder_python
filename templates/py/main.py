@@ -8,7 +8,7 @@ from itertools import accumulate, combinations, permutations, product  # type: i
 
 
 def LI(): return list(map(int, sys.stdin.buffer.readline().split()))
-def I(): return int(sys.stdin.buffer.readline())
+def I(): return int(sys.stdin.buffer.readline()) #
 def LS(): return sys.stdin.buffer.readline().rstrip().decode("utf-8").split()
 def S(): return sys.stdin.buffer.readline().rstrip().decode("utf-8")
 def IR(n): return [I() for _ in range(n)]
