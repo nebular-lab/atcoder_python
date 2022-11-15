@@ -17,3 +17,15 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+x,k,d=LI()
+
+sho=abs(x)//d
+
+if sho>=k:
+    print (abs(x)-d*k)
+else :
+    if ((k-sho)%2)==0:
+        print (abs(x)-d*sho)
+    else:
+        print (d-(abs(x)-d*sho))

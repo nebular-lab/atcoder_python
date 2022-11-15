@@ -18,4 +18,6 @@ def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
 
+h,w,x,y=LI()
+s=SR(h)
 

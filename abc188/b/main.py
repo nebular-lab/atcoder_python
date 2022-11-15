@@ -18,4 +18,15 @@ def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
 
+N=I()
+A=LI()
+B=LI()
+innerProduct=0
+for i in range(N):
+    innerProduct+=A[i]*B[i]
+
+if innerProduct==0:
+    print("Yes")
+else:
+    print("No")
 

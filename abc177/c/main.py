@@ -17,3 +17,13 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n=I()
+a=LI()
+ans=0
+A_sum=sum(a)
+for i in range (n-1):
+    A_sum-=a[i]
+    ans+=(a[i]*A_sum)%(10**9+7)
+    ans%=10**9+7
+print (ans)

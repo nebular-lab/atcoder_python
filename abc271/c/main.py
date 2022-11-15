@@ -17,3 +17,23 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n=I()
+a=LI()
+
+def ok(x):
+    less_than_x=[e for e in a if e<=x]
+    need=x-len(set(less_than_x))
+    extra=n-need
+    return extra//2>=need
+
+buttom=0
+top=333333
+
+while top-buttom>1:
+    mid=(top+buttom)//2
+    if (ok(mid)):
+        buttom=mid
+    else :
+        top=mid
+print(buttom)

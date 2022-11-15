@@ -17,3 +17,18 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+def tenToEight(x):
+    x=int(x)
+    eight=""
+    while(x!=0):
+        eight+=str(x%8)
+        x//=8
+    if "7" in eight:
+        return True
+    else:
+        return False
+
+
+n=I()
+

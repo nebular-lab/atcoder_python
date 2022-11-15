@@ -17,3 +17,15 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n,k=LI()
+town=LIR(n)
+
+town.sort()
+
+for i in range(n):
+    a,b = town[i]
+    if a>k:
+        break
+    k+=b
+print(k)
