@@ -17,3 +17,14 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n,l=LI()
+
+count=[0]*(n+1)
+count[0]=1
+for i in range(1,n+1):
+    if 0<=i-l:
+        count[i]=count[i-1]+count[i-l]
+    else:
+        count[i]=count[i-1]
+print(count[n]%(10**9+7))

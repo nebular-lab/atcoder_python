@@ -17,3 +17,22 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n,q=LI()
+a=LI()
+start=0
+for _ in range(q):
+    t,x,y=LI()
+    target_x=(start+x-1)%n
+    target_y=(start+y-1)%n
+    if t==1:
+        swap=a[target_x]
+        a[target_x]=a[target_y]
+        a[target_y]=swap
+        # print(a[target_x],a[target_y])
+    if t==2:
+        start=(n+start-1)%n
+    if t==3:
+        print(a[target_x])
+
+

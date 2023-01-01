@@ -17,3 +17,14 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n=I()
+a=LI()
+b=LI()
+a.sort()
+b.sort()
+sum=0
+for i in range(n):
+    sum+=abs(a[i]-b[i])
+print(sum)
+

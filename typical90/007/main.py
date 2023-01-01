@@ -17,3 +17,25 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n=I()
+a=LI()
+q=I()
+
+
+a.sort()
+
+def binary_search(x):
+    l=0
+    r=n-1
+    while r-l>1:
+        m=(r+l)//2
+        if a[m]<=x:
+            l=m
+        else:
+            r=m
+    print(min(abs(x-a[r]),abs(x-a[l])))
+
+for i in range(q):
+    q=I()
+    binary_search(q)

@@ -17,3 +17,16 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n,k=LI()
+point=[]
+for _ in range(n):
+    a,b=LI()
+    point.append(b)
+    point.append(a-b)
+point.sort(reverse=True)
+
+print(sum(point[:k]))
+
+
+
