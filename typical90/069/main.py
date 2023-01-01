@@ -17,3 +17,21 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n,k=LI()
+
+if n==1:
+    print(k)
+    exit()
+if n==2:
+    if k==1:
+        print(0)
+        exit()
+    print(k*(k-1))
+    exit()
+if k<=2:
+    print(0)
+    exit()
+MOD = 10 ** 9 + 7
+ans = ((k * (k-1)) % MOD) * pow(k-2, n-2, MOD)
+print(ans % MOD)
