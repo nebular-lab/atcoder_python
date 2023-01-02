@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+import math
 from bisect import bisect, bisect_left, bisect_right, insort, insort_left, insort_right  # type: ignore
 from collections import Counter, defaultdict, deque  # type: ignore
 from fractions import gcd  # type: ignore
@@ -17,3 +18,18 @@ def SR(n): return [S() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
 def SRL(n): return [list(S()) for _ in range(n)]
 def MSRL(n): return [[int(i) for i in list(S())] for _ in range(n)]
+
+n=I()
+rem=n
+p=[]
+
+for i in range(2,n):
+    while rem%i==0:
+        rem/=i
+        p.append(i)
+    if i*i>n:
+        break
+if rem!=1:
+    p.append(rem)
+
+print(math.ceil(math.log2(len(p))))
